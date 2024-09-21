@@ -1,0 +1,26 @@
+---
+const photos = [
+    { src: '/img/gallery/1.jpg', alt: 'Gallery 1' },
+    { src: '/img/gallery/2.jpg', alt: 'Gallery 2' },
+    { src: '/img/gallery/3.jpg', alt: 'Gallery 3' },
+    { src: '/img/gallery/4.jpg', alt: 'Gallery 4' },
+    { src: '/img/gallery/5.jpg', alt: 'Gallery 5' },
+    { src: '/img/gallery/6.jpg', alt: 'Gallery 6' },
+]
+---
+
+<section>
+
+    <h1>Gallery</h1>
+    <ul>
+        {
+            photos.map((photo) => (
+                <li class="link-card">
+                    <img src={photo.src} alt={photo.alt} />
+                </li>
+            ))
+        }
+    </ul>
+
+
+</section>

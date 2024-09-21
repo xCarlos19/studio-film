@@ -1,0 +1,35 @@
+---
+import Card from "../components/Card.astro";
+
+const servicios = [
+    {
+        title: "Fotobook Actoral",
+        description: "This is a description of service 1.",
+        price: "$25"
+    },
+    {
+        title: "Videobook",
+        description: "This is a description of service 2.",
+        price: "$50"
+    },
+    {
+        title: "Coach Actoral",
+        description: "This is a description of service 3.",
+        price: "$100"
+    }
+];
+---
+
+<section>
+    <h1>Services</h1>
+    <ul>
+        {servicios.map((service) => (
+            <Card
+                title={service.title}
+                body={service.description}
+                href="/contact"
+            />
+        ))}
+
+    </ul>
+</section>
