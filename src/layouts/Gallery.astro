@@ -1,26 +1,28 @@
 ---
+import Photo from "../components/Photo.astro";
+
 const photos = [
-    { src: '/img/gallery/1.jpg', alt: 'Gallery 1' },
-    { src: '/img/gallery/2.jpg', alt: 'Gallery 2' },
-    { src: '/img/gallery/3.jpg', alt: 'Gallery 3' },
-    { src: '/img/gallery/4.jpg', alt: 'Gallery 4' },
-    { src: '/img/gallery/5.jpg', alt: 'Gallery 5' },
-    { src: '/img/gallery/6.jpg', alt: 'Gallery 6' },
-]
+    { src: '/public/photo1.jpeg', alt: 'Gallery 1' },
+    { src: '/public/photo3.jpeg', alt: 'Gallery 3' },
+    { src: '/public/photo3.jpeg', alt: 'Gallery 3' }
+];
 ---
 
-<section>
-
-    <h1>Gallery</h1>
-    <ul>
+<section class="mt-10 w-[80%] m-auto md:h-screen content-center">
+    
+    <ul class="flex-colum gap-2 md:flex md:justify-between">
         {
             photos.map((photo) => (
-                <li class="link-card">
-                    <img src={photo.src} alt={photo.alt} />
-                </li>
+               
+                    <Photo href={photo.src} alt={photo.alt} />
+            
             ))
         }
     </ul>
 
-
+    <div class="flex justify-center mt-10">
+        <button class="px-12 py-4 border-2 rounded-lg font-bold text-white border-white hover:bg-slate-200 hover:text-black">
+            VER MÁS
+        </button>
+    </div>
 </section>
