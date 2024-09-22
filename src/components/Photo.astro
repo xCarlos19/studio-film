@@ -7,8 +7,9 @@ interface Props {
 const { href, alt } = Astro.props;
 ---
 
-<li class="bg-white border-4 border-solid border-gray-300"  >
-	<img class="img-shadow w-[240] md:w-[480px] p-1" src={href} alt={alt}>
+<li class="flex justify-center">
+
+	<img class="drop-shadow-2xl w-[240] md:w-[360px] self-center" src={href} alt={alt}>
 </li>
 
 
