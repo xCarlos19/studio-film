@@ -3,19 +3,19 @@ import Photo from "../components/Photo.astro";
 
 const photos = [
     { src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' },
-    { src: '/studio-film/photo3.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo2.jpeg', alt: 'Gallery 3' },
     { src: '/studio-film/photo3.jpeg', alt: 'Gallery 3' },
     { src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' },
     { src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' },
-    { src: '/studio-film/photo3.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo2.jpeg', alt: 'Gallery 3' },
     { src: '/studio-film/photo3.jpeg', alt: 'Gallery 3' },
     { src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' }
 ];
 ---
 
-<section class="mt-10 w-[80%] m-auto md:h-max content-center">
+<!--<section class="mt-10 w-[80%] m-auto md:h-max content-center">
     
-    <ul class="grid grid-cols-3 md:flex gap-4 flex-wrap">
+    <ul class="grid grid-cols-3 md:flex gap-4">
         {
             photos.map((photo) => (
                
@@ -30,4 +30,33 @@ const photos = [
             VER MÁS
         </button>
     </div>
-</section>
+</section> -->
+
+<section class="text-gray-600 body-font h-max">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden">
+          <div class="w-24 h-full bg-black"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">GALERÍA</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {
+            photos.map((photo) => (
+               
+                    <Photo href={photo.src} alt={photo.alt} />
+            
+            ))
+        }
+
+      </div>
+      <div class="flex justify-center mt-10">
+        <button class="px-12 py-4 border-2 rounded-lg font-bold text-black border-black hover:bg-black hover:text-white">
+            VER MÁS
+        </button>
+    </div>
+    </div>
+  </section>

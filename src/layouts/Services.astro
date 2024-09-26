@@ -3,33 +3,49 @@ import Card from "../components/Card.astro";
 
 const servicios = [
     {
-        title: "Fotobook Actoral",
-        description: "This is a description of service 1.",
-        price: "$25"
+        title: "FOTOBOOK ACTORAL",
+        description: "SI ERES ACTOR O ACTRIZ, UN FOTOBOOK PROFESIONAL ES TU CARTA DE PRESENTACIÓN MÁS PODEROSA. NO ES SOLO UN CONJUNTO DE FOTOS, ES LA FORMA EN QUE LOS DIRECTORES DE CASTING TE CONOCERÁN ANTES DE VERTE ACTUAR.",
+        price: "25€",
+        src:"/studio-film/photo7.jpeg"
     },
     {
-        title: "Videobook",
-        description: "This is a description of service 2.",
-        price: "$50"
+        title: "VIDEOBOOK",
+        description: "UN VIDEOBOOK ES EL ESCAPARATE DE TU CAPACIDAD PARA ACTUAR, TRANSMITIR EMOCIONES Y CONVERTIRTE EN CUALQUIER PERSONAJE FRENTE A LA CÁMARA. ES LA HERRAMIENTA DEFINITIVA PARA MOSTRAR TU TALENTO ACTORAL EN MOVIMIENTO.",
+        price: "50€",
+        src:"/studio-film/photo7.jpeg"
     },
     {
-        title: "Coach Actoral",
-        description: "This is a description of service 3.",
-        price: "$100"
+        title: "COACH ACTORAL",
+        description: "EL SERVICIO DE COACHING ACTORAL OFRECE A LOS ACTORES UN ACOMPAÑAMIENTO PERSONALIZADO PARA PERFECCIONAR SUS HABILIDADES INTERPRETATIVAS, AYUDÁNDOLES A MEJORAR SU MANEJO DE EMOCIONES Y PULIR TÉCNICAS ESCÉNICAS.",
+        price: "100€",
+        src:"/studio-film/photo7.jpeg"
     }
 ];
 ---
 
-<section class="h-screen">
-    <h1>Services</h1>
-    <ul>
-        {servicios.map((service) => (
+<section class="text-gray-600 body-font h-screen" id="servicios">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden">
+          <div class="w-24 h-full bg-black"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">SERVICIOS</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+       {servicios.map((service) => (
+
             <Card
                 title={service.title}
-                body={service.description}
-                href="/contact"
+                description={service.description}
+                price={service.price}
+                href="/contact",
+                src={service.src}
             />
         ))}
 
-    </ul>
-</section>
+      </div>
+    </div>
+  </section>

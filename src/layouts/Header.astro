@@ -1,42 +1,47 @@
 <header class="relative flex h-screen overflow-hidden">
     <div
-        class="relative z-30 flex-col justify-center my-auto ml-28 h-auto text-white"
+        class="relative z-30 flex flex-col justify-center my-auto mx-6 lg:ml-28 h-auto text-white text-center lg:text-left"
     >
-    <div class="flex-col justify-center text-shadow">
-        <h1 class="text-9xl mb-4 text-center">STUDIO FILM 23</h1>
+        <div class="flex flex-col justify-center text-shadow">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-9xl mb-4">
+                STUDIO FILM 23
+            </h1>
 
-        <h2 class="text-xl text-center">
-            SI ESTAS BUSCANDO IMPULSAR TU CARRERA Y TENER UNA IMAGEN MÁS PROFESIONAL, SOMOS TU ESTUDIO
-        </h2>
-
-    </div>
-
-        <div class="my-10 flex justify-evenly text-shadow">
-            <span class="text-xl">FOTOBOOK ACTORAL</span>
-            <span>|</span>
-            <span class="text-xl">VIDEOBOOK</span>
-            <span>|</span>
-            <span class="text-xl">COACH ACTORAL</span>
-
+            <h2 class="text-sm sm:text-lg md:text-xl lg:text-2xl">
+                SI ESTÁS BUSCANDO IMPULSAR TU CARRERA Y TENER UNA IMAGEN MÁS
+                PROFESIONAL, SOMOS TU ESTUDIO
+            </h2>
         </div>
 
-        <div class="mt-8 flex w-auto justify-center gap-24">
-            <button class="px-12 py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black">
-                SERVICIOS
+        <div
+            class="my-10 flex flex-row justify-center lg:justify-evenly text-shadow space-x-2 sm:space-y-0 sm:space-x-4 lg:space-x-0"
+        >
+            <span class="text-sm sm:text-lg lg:text-xl">FOTOBOOK ACTORAL</span>
+            <span class="hidden md:block">|</span>
+            <span class="text-sm sm:text-lg lg:text-xl">VIDEOBOOK</span>
+            <span class="hidden md:block">|</span>
+            <span class="text-sm sm:text-lg lg:text-xl">COACH ACTORAL</span>
+        </div>
+
+        <div
+            class="mt-8 w-[60%] items-center m-auto flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 lg:gap-24"
+        >
+            <button
+                class="px-8 sm:px-12 py-3 sm:py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black"
+            >
+                <a href="#servicios">SERVICIOS</a>
             </button>
-            <button class="px-12 py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black">
+            <button
+                class="px-8 sm:px-12 py-3 sm:py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black"
+            >
                 CONTACTO
             </button>
         </div>
     </div>
+    <div class="b-opacity"></div>
 
-    <video
-        autoplay
-        loop
-        muted
-        class="absolute z-10 w-auto min-w-full min-h-full max-w-none opacity-80"
-    >
-        <source src="https://cdn.pixabay.com/video/2019/06/17/24496-344562743_large.mp4" />
+    <video autoplay loop muted class="hero-video">
+        <source src="/studio-film/video1.mp4" />
     </video>
 </header>
 
@@ -44,5 +49,29 @@
     .text-shadow {
         text-shadow: 2px 2px 4px #000000;
     }
-</style>
+    .hero-video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.85;
+    }
 
+    .b-opacity {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
