@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+
+const images = [
+{ src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo1.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo2.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo3.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo4.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo5.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo6.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo7.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo1.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo2.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo3.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo4.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo5.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo6.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo7.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo1.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo2.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo3.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo4.jpeg', alt: 'Gallery 1' },
+    { src: '/studio-film/photo5.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo6.jpeg', alt: 'Gallery 3' },
+    { src: '/studio-film/photo7.jpeg', alt: 'Gallery 1' }
+]
+---
+
+<div
+    class="mx-auto container my-8 p-4 columns-2 md:columns-3 lg:columns-4 xl:columns-5"
+  >
+    {
+      images.map((image) => (
+        <Image
+          src={image.src}
+          alt={`Image from ${image.alt} album`}
+          format="avif"
+          quality={50}
+          width={300}
+          height={300}
+          class="rounded mb-4 border border-transparent hover:scale-105 hover:cursor-pointer transition-all duration-75 ease-in-out"
+          loading="lazy"
+        />
+      ))
+    }
+  </div>

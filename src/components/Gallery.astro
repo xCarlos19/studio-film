@@ -1,5 +1,5 @@
 ---
-import Photo from "../components/Photo.astro";
+import Photo from "./Photo.astro";
 
 const photos = [
     { src: '/studio-film/photo1.jpeg', alt: 'Gallery 1' },
@@ -55,7 +55,7 @@ const photos = [
       </div>
       <div class="flex justify-center mt-10">
         <button class="px-12 py-4 border-2 rounded-lg font-bold text-black border-black hover:bg-black hover:text-white">
-            VER MÁS
+            <a href="/studio-film/galeria">VER MÁS</a>
         </button>
     </div>
     </div>
