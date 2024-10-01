@@ -32,24 +32,24 @@ const { page } = Astro.props;
       class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center gap-10"
     >
       <a
-        class="inline-flex items-center cursor-pointer bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        class="inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
         href="/"
         >Inicio</a
       >
       <a
-        class:list={['inline-flex items-center cursor-pointer bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0',
+        class:list={['inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0',
         page === 'galeria' && 'text-gray-900 bg-gray-200']}
         href="/galeria"
       >
         Galería
       </a>
       <a
-      class:list={['inline-flex items-center cursor-pointer bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0',
+      class:list={['inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0',
         page === 'servicios' && 'text-gray-900 bg-gray-200']}
         href="/servicios">Servicios</a
       >
       <a
-        class="inline-flex items-center cursor-pointer bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        class="inline-flex items-center cursor-pointer bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0"
         >Contacto</a
       >
     </nav>
