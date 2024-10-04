@@ -1,26 +1,63 @@
 import { render } from "@react-email/render";
 import { useState } from "react";
 import { SampleEmail } from "../emails/SampleEmail";
+const from = import.meta.env.PUBLIC_EMAIL_FROM;
+const to = import.meta.env.PUBLIC_EMAIL_DEST;
 
+const packs = [{
+    name: "Fotobook Oro",
+    price: 175,
+}, {
+    name: "Fotobook Plata",
+    price: 80,
+},
+{
+    name: "Fotobook Bronce",
+    price: 50,
+},
+{
+    name: "Videobook Monólogo",
+    price: 200,
+}
+    , {
+    name: "Videobook Escena",
+    price: 375,
+}, {
+    name: "Videobook Completo",
+    price: 500,
+}, {
+    name: "Coach (3h)",
+    price: 50,
+}, {
+    name: "Coach (9h)",
+    price: 100,
+}, {
+    name: "Coach (12h)",
+    price: 150,
+}]
 
-
-const EmailForm = () => {
+const Form = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [pack, setPack] = useState("");
+
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        console.log(name, email, message);
 
-        const finalHtml = render(<SampleEmail userFirstname={name} />, {
+        console.log(name, email, message, from, to);
+
+        const finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             pretty: true,
         });
 
-        const finalText = render(<SampleEmail userFirstname={name} />, {
+        const finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             plainText: true,
         });
+
+        console.log(finalHtml);
 
         try {
             const res = await fetch("/api/sendEmail.json", {
@@ -29,17 +66,19 @@ const EmailForm = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    from: import.meta.env.EMAIL_FROM,
-                    to: import.meta.env.EMAIL_DEST,
-                    subject: `Hi`,
+                    to: to,
+                    from: from,
+                    subject: email + " - " + pack + "€",
                     html: finalHtml,
                     text: finalText,
                 }),
             });
             const data = await res.json();
-            console.log(data);
+            if (data) {
+                console.log(data);
+            }
         } catch (error) {
-            console.error(error);
+
         }
     };
 
@@ -74,7 +113,7 @@ const EmailForm = () => {
                 >Email</label
                 >
                 <input
-                onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     id="email"
                     name="email"
@@ -84,10 +123,25 @@ const EmailForm = () => {
                 />
             </div>
             <div className="relative mb-4">
+                <label htmlFor="pack" className="leading-7 text-sm text-gray-600"
+                >Selecciona pack</label
+                ><select
+                    name="pack"
+                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    id="pack"
+                    value={pack}
+                    onChange={(e) => { setPack(e.target.value) }}>
+                    {packs.map((pack) => (
+                        pack.name === "Fotobook Oro" ? <option key={pack.name} selected value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option> : <option key={pack.name} value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option>
+                    ))}
+
+                </select>
+            </div>
+            <div className="relative mb-4">
                 <label htmlFor="message" className="leading-7 text-sm text-gray-600"
                 >Mensaje</label>
                 <textarea
-                onChange={(e) => setMessage(e.target.value)}
+                    onChange={(e) => setMessage(e.target.value)}
                     id="message"
                     name="message"
                     value={message}
@@ -106,4 +160,4 @@ const EmailForm = () => {
         </form>
     );
 };
-export default EmailForm;
+export default Form;

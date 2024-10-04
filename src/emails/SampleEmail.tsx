@@ -13,41 +13,25 @@ import {
   import * as React from "react";
   
   interface SampleEmailProps {
-    userFirstname: string;
+    email: string;
+    pack: string;
+    name: string;
+    message: string;
   }
   
-  export const SampleEmail = ({ userFirstname = "Zeno" }: SampleEmailProps) => (
+  export const SampleEmail = ({email,pack,name,message}: SampleEmailProps) => (
     <Html>
       <Head />
       <Preview>
-        The sales intelligence platform that helps you uncover qualified leads.
+        Nuevo mensaje de {name} - {email}
       </Preview>
       <Body style={main}>
         <Container style={container}>
-          <Img
-            src="https://learnastro.dev/_astro/astro-course-icon.a90ae131_Z2s6xiC.webp"
-            width="181"
-            height="200"
-            alt="Astro Course"
-            style={logo}
-          />
-          <Text style={paragraph}>Hi {userFirstname},</Text>
+          <Text style={paragraph}>Nuevo mensaje de {name} interesado en {pack}€ </Text>
           <Text style={paragraph}>
-            Welcome to Koala, the sales intelligence platform that helps you
-            uncover qualified leads and close deals faster.
+            {message}
           </Text>
-          <Section style={btnContainer}>
-            <Button style={button} href="https://getkoala.com">
-              Get started
-            </Button>
-          </Section>
-          <Text style={paragraph}>
-            Best,
-            <br />
-            The Koala team
-          </Text>
-          <Hr style={hr} />
-          <Text style={footer}>408 Warren Rd - San Mateo, CA 94402</Text>
+          
         </Container>
       </Body>
     </Html>
@@ -66,36 +50,7 @@ import {
     padding: "20px 0 48px",
   };
   
-  const logo = {
-    margin: "0 auto",
-  };
-  
   const paragraph = {
     fontSize: "16px",
     lineHeight: "26px",
-  };
-  
-  const btnContainer = {
-    textAlign: "center" as const,
-  };
-  
-  const button = {
-    backgroundColor: "#5F51E8",
-    borderRadius: "3px",
-    color: "#fff",
-    padding: "12px",
-    fontSize: "16px",
-    textDecoration: "none",
-    textAlign: "center" as const,
-    display: "block",
-  };
-  
-  const hr = {
-    borderColor: "#cccccc",
-    margin: "20px 0",
-  };
-  
-  const footer = {
-    color: "#8898aa",
-    fontSize: "12px",
   };
