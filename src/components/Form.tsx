@@ -1,8 +1,8 @@
 import { render } from "@react-email/render";
 import { useState } from "react";
 import { SampleEmail } from "../emails/SampleEmail";
-const from = import.meta.env.PUBLIC_EMAIL_FROM;
-const to = import.meta.env.PUBLIC_EMAIL_DEST;
+const from = import.meta.env.EMAIL_FROM;
+const to = import.meta.env.EMAIL_DEST;
 
 const packs = [{
     name: "Fotobook Oro",
