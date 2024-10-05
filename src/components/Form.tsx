@@ -1,8 +1,9 @@
 import { render } from "@react-email/render";
 import { useState } from "react";
 import { SampleEmail } from "../emails/SampleEmail";
-const from = import.meta.env.EMAIL_FROM;
-const to = import.meta.env.EMAIL_DEST;
+import { EMAIL_FROM, EMAIL_DEST  } from "astro:env/client"
+
+export const prerender = true;
 
 const packs = [{
     name: "Fotobook Oro",
@@ -47,7 +48,7 @@ const Form = () => {
         e.preventDefault();
 
 
-        console.log(name, email, message, from, to);
+        console.log(name, email, message, EMAIL_FROM, EMAIL_DEST);
 
         const finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             pretty: true,
@@ -66,8 +67,8 @@ const Form = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    to: to,
-                    from: from,
+                    to: EMAIL_DEST,
+                    from: EMAIL_FROM,
                     subject: email + " - " + pack + "€",
                     html: finalHtml,
                     text: finalText,
@@ -126,13 +127,14 @@ const Form = () => {
                 <label htmlFor="pack" className="leading-7 text-sm text-gray-600"
                 >Selecciona pack</label
                 ><select
+                defaultValue="Fotobook Oro 175"
                     name="pack"
                     className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     id="pack"
                     value={pack}
                     onChange={(e) => { setPack(e.target.value) }}>
                     {packs.map((pack) => (
-                        pack.name === "Fotobook Oro" ? <option key={pack.name} selected value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option> : <option key={pack.name} value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option>
+                       <option key={pack.name} value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option>
                     ))}
 
                 </select>
