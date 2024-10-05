@@ -65,7 +65,7 @@ const Form = () => {
         }
 
         try {
-            const res = await fetch("/api/sendEmail.json", {
+            const res = await fetch("https://studio-film.vercel.app/api/sendEmail.json", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
