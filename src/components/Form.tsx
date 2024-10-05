@@ -1,7 +1,4 @@
-import { render } from "@react-email/render";
-import { redirect } from "react-router-dom";
 import { useState } from "react";
-import { SampleEmail } from "../emails/SampleEmail";
 import { EMAIL_FROM, EMAIL_DEST  } from "astro:env/client"
 
 export const prerender = true;
@@ -50,7 +47,7 @@ const Form = () => {
         setName("");
         setEmail("");
         setMessage("");
-        const finalHtml = "<html><body><h1>Nuevo mensaje de "+name+"-"+email+"</h1><h2>"+pack+"€</h2><p>"+message+"</p></body></html>";
+        const finalHtml = "<html><body><h1>Nuevo mensaje de "+name+" - "+email+"</h1><h2>"+pack+"€</h2><p>"+message+"</p></body></html>";
    
         try {
             const res = await fetch("/api/sendEmail.json", {
@@ -83,11 +80,10 @@ const Form = () => {
             className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
         >
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Feedback
+                Formulario
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">
-                Post-ironic portland shabby chic echo park, banjo fashion
-                axe
+                Rellena el formulario y nos pondremos en contacto contigo.
             </p>
             <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-gray-600"
@@ -146,12 +142,11 @@ const Form = () => {
                 ></textarea>
             </div>
             <button type="submit"
-                className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                className=" py-2 px-6 text-lg rounded-lg font-bold text-black border-2 border-black hover:bg-black hover:text-white"
             >Enviar
             </button>
             <p className="text-xs text-gray-500 mt-3">
-                Chicharrones blog helvetica normcore iceland tousled brook
-                viral artisan.
+                Si no estás interesado en ningún pack en concreto, puedes indicarlo en el mensaje y te asesoraremos en lo que más se ajuste a tu perfil.
             </p>
         </form>
     );
