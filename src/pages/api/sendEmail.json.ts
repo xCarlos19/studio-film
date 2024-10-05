@@ -9,6 +9,7 @@ export const POST: APIRoute = async ({ params, request }) => {
     const { to, from, html, subject, text } = body;
   
     if (!to || !from || !html || !subject || !text) {
+      alert("Did not provide the right data");
       return new Response(null, {
         status: 404,
         statusText: "Did not provide the right data",

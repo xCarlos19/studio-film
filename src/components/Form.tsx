@@ -49,7 +49,7 @@ const Form = () => {
         var finalHtml = ""
         var finalText = ""
 
-        console.log(name, email, message, EMAIL_FROM, EMAIL_DEST);
+        alert(""+name+"" +email+"," +message+","+ EMAIL_FROM +","+EMAIL_DEST);
         try {
         finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             pretty: true,
