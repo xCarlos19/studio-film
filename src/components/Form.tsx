@@ -49,8 +49,8 @@ const Form = () => {
         var finalHtml = ""
         var finalText = ""
 
-        alert(""+name+"" +email+"," +message+","+ EMAIL_FROM +","+EMAIL_DEST);
-        try {
+        alert(""+name+"" +email+"," +pack+","+message+","+ EMAIL_FROM +","+EMAIL_DEST);
+        /* try {
         finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             pretty: true,
         });
@@ -62,10 +62,10 @@ const Form = () => {
     }
         catch (error) {
             alert(error);
-        }
+        } */
 
         try {
-            const res = await fetch("https://studio-film.vercel.app/api/sendEmail.json/", {
+            const res = await fetch("/api/sendEmail.json", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -76,8 +76,8 @@ const Form = () => {
                     to: EMAIL_DEST,
                     from: EMAIL_FROM,
                     subject: email + " - " + pack + "€",
-                    html: finalHtml,
-                    text: finalText,
+                    html: "HI",
+                    text: "HI",
                 }),
             });
             const data = await res.json();
