@@ -46,20 +46,23 @@ const Form = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        alert("Enviando email");
+        var finalHtml = ""
+        var finalText = ""
 
         console.log(name, email, message, EMAIL_FROM, EMAIL_DEST);
-
-        const finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
+        try {
+        finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             pretty: true,
         });
 
-        const finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
+        finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
             plainText: true,
         });
-
-        console.log(finalHtml);
+        alert(finalHtml);
+    }
+        catch (error) {
+            alert(error);
+        }
 
         try {
             const res = await fetch("/api/sendEmail.json", {
