@@ -1,4 +1,5 @@
 import { render } from "@react-email/render";
+import { redirect } from "react-router-dom";
 import { useState } from "react";
 import { SampleEmail } from "../emails/SampleEmail";
 import { EMAIL_FROM, EMAIL_DEST  } from "astro:env/client"
@@ -50,21 +51,17 @@ const Form = () => {
         var finalText = ""
 
         alert(""+name+"" +email+"," +pack+","+message+","+ EMAIL_FROM +","+EMAIL_DEST);
-        /* try {
-        finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
-            pretty: true,
-        });
-
-        finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
-            plainText: true,
-        });
-        alert(finalHtml);
-    }
-        catch (error) {
-            alert(error);
-        } */
-
+        
+        
+   
         try {
+            finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
+                pretty: true,
+            });
+    
+            finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
+                plainText: true,
+            });
             const res = await fetch("/api/sendEmail.json", {
                 method: "POST",
                 headers: {
@@ -76,14 +73,14 @@ const Form = () => {
                     to: EMAIL_DEST,
                     from: EMAIL_FROM,
                     subject: email + " - " + pack + "€",
-                    html: "HI",
-                    text: "HI",
+                    html: finalHtml,
+                    text: finalText,
                 }),
             });
             const data = await res.json();
             if (data) {
-                console.log(data);
-                alert(data);
+                alert("Gracias por tu mensaje "+ name + " en breve nos pondremos en contacto contigo");
+                return redirect('/');
             }
         } catch (error) {
             alert(error);
