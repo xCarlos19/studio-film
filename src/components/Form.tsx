@@ -47,6 +47,7 @@ const Form = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        alert("Enviando email");
 
         console.log(name, email, message, EMAIL_FROM, EMAIL_DEST);
 
