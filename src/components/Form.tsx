@@ -47,21 +47,12 @@ const Form = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        var finalHtml = ""
-        var finalText = ""
-
-        alert(""+name+"" +email+"," +pack+","+message+","+ EMAIL_FROM +","+EMAIL_DEST);
-        
-        
+        setName("");
+        setEmail("");
+        setMessage("");
+        const finalHtml = "<html><body><h1>Nuevo mensaje de "+name+"-"+email+"</h1><h2>"+pack+"€</h2><p>"+message+"</p></body></html>";
    
         try {
-            finalHtml = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
-                pretty: true,
-            });
-    
-            finalText = await render(<SampleEmail name={name} email={email} pack={pack} message={message} />, {
-                plainText: true,
-            });
             const res = await fetch("/api/sendEmail.json", {
                 method: "POST",
                 headers: {
@@ -74,13 +65,12 @@ const Form = () => {
                     from: EMAIL_FROM,
                     subject: email + " - " + pack + "€",
                     html: finalHtml,
-                    text: finalText,
+                    text: finalHtml,
                 }),
             });
             const data = await res.json();
             if (data) {
                 alert("Gracias por tu mensaje "+ name + " en breve nos pondremos en contacto contigo");
-                return redirect('/');
             }
         } catch (error) {
             alert(error);
@@ -89,7 +79,7 @@ const Form = () => {
 
     return (
 
-        <form method="POST" onSubmit={handleSubmit}
+        <form method="POST" onSubmit={handleSubmit} id="form"
             className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
         >
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
