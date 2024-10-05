@@ -80,7 +80,7 @@ const Form = () => {
                 console.log(data);
             }
         } catch (error) {
-
+            alert(error);
         }
     };
 
