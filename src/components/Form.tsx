@@ -81,6 +81,7 @@ const Form = () => {
             const data = await res.json();
             if (data) {
                 console.log(data);
+                alert(data);
             }
         } catch (error) {
             alert(error);
