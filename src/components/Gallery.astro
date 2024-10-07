@@ -1,15 +1,16 @@
 ---
 import Photo from "./Photo.astro";
+import { Image } from 'astro:assets';
 
 const photos = [
-    { src: './photo1.jpeg', alt: 'Gallery 1' },
-    { src: './photo2.jpeg', alt: 'Gallery 3' },
-    { src: './photo3.jpeg', alt: 'Gallery 3' },
-    { src: './photo1.jpeg', alt: 'Gallery 1' },
-    { src: './photo1.jpeg', alt: 'Gallery 1' },
-    { src: './photo2.jpeg', alt: 'Gallery 3' },
-    { src: './photo3.jpeg', alt: 'Gallery 3' },
-    { src: './photo1.jpeg', alt: 'Gallery 1' }
+    { src: '/photo1.jpeg', alt: 'Gallery 1' },
+    { src: '/photo9.jpeg', alt: 'Gallery 9' },
+    { src: '/photo3.jpeg', alt: 'Gallery 3' },
+    { src: '/photo12.jpeg', alt: 'Gallery 1' },
+    { src: '/photo13.jpeg', alt: 'Gallery 1' },
+    { src: '/photo2.jpeg', alt: 'Gallery 3' },
+    { src: '/photo16.jpeg', alt: 'Gallery 3' },
+    { src: '/photo11.jpeg', alt: 'Gallery 1' }
 ];
 ---
 <section class="text-gray-600 body-font h-max">
@@ -27,7 +28,7 @@ const photos = [
         {
             photos.map((photo) => (
                
-                    <Photo href={photo.src} alt={photo.alt} />
+                    <img class="object-cover h-[450px] w-[300px]" src={photo.src} alt={photo.alt} />
             
             ))
         }

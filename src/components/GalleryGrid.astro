@@ -2,28 +2,22 @@
 import { Image } from "astro:assets";
 
 const images = [
-{ src: '/photo1.jpeg', alt: 'Gallery 1' },
     { src: '/photo1.jpeg', alt: 'Gallery 3' },
     { src: '/photo2.jpeg', alt: 'Gallery 3' },
     { src: '/photo3.jpeg', alt: 'Gallery 1' },
+    { src: '/photo10.jpeg', alt: 'Gallery 1' },
+    { src: '/photo11.jpeg', alt: 'Gallery 1' },
+    { src: '/photo12.jpeg', alt: 'Gallery 3' },
+    { src: '/photo13.jpeg', alt: 'Gallery 3' },
     { src: '/photo4.jpeg', alt: 'Gallery 1' },
     { src: '/photo5.jpeg', alt: 'Gallery 3' },
     { src: '/photo6.jpeg', alt: 'Gallery 3' },
     { src: '/photo7.jpeg', alt: 'Gallery 1' },
-    { src: '/photo1.jpeg', alt: 'Gallery 3' },
-    { src: '/photo2.jpeg', alt: 'Gallery 3' },
-    { src: '/photo3.jpeg', alt: 'Gallery 1' },
-    { src: '/photo4.jpeg', alt: 'Gallery 1' },
-    { src: '/photo5.jpeg', alt: 'Gallery 3' },
-    { src: '/photo6.jpeg', alt: 'Gallery 3' },
-    { src: '/photo7.jpeg', alt: 'Gallery 1' },
-    { src: '/photo1.jpeg', alt: 'Gallery 3' },
-    { src: '/photo2.jpeg', alt: 'Gallery 3' },
-    { src: '/photo3.jpeg', alt: 'Gallery 1' },
-    { src: '/photo4.jpeg', alt: 'Gallery 1' },
-    { src: '/photo5.jpeg', alt: 'Gallery 3' },
-    { src: '/photo6.jpeg', alt: 'Gallery 3' },
-    { src: '/photo7.jpeg', alt: 'Gallery 1' }
+    { src: '/photo8.jpeg', alt: 'Gallery 3' },
+    { src: '/photo9.jpeg', alt: 'Gallery 3' },
+    { src: '/photo14.jpeg', alt: 'Gallery 1' },
+    { src: '/photo15.jpeg', alt: 'Gallery 3' },
+    { src: '/photo16.jpeg', alt: 'Gallery 3' }
 ]
 ---
 
@@ -36,7 +30,7 @@ const images = [
           src={image.src}
           alt={`Image from ${image.alt} album`}
           format="jpeg"
-          quality={50}
+          quality="high"
           width={300}
           height={300}
           class="rounded mb-4 border border-transparent hover:scale-105 hover:cursor-pointer transition-all duration-75 ease-in-out"

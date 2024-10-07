@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	href: string;
 	alt: string;
@@ -7,10 +9,6 @@ interface Props {
 const { href, alt } = Astro.props;
 ---
 
-<li class="flex justify-center ">
-
-	<img class="drop-shadow-2xl w-[240px] md:w-[360px] self-center hover:transition" src={href} alt={alt}>
-</li>
 
 
 
