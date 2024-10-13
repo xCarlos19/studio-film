@@ -51,7 +51,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
             <img
               src={selectedImage?.src}
               alt={`Large view of ${selectedImage?.alt}`}
-              className="max-w-xl max-h-[90%] rounded"
+              className="max-w-sm max-h-[90%] md:max-w-xl rounded"
             />
           </div>
         </div>
