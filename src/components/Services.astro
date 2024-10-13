@@ -4,23 +4,23 @@ import Card from "./Card.astro";
 const servicios = [
     {
         title: "FOTOBOOK ACTORAL",
-        description: "SI ERES ACTOR O ACTRIZ, UN FOTOBOOK PROFESIONAL ES TU CARTA DE PRESENTACIÓN MÁS PODEROSA. NO ES SOLO UN CONJUNTO DE FOTOS, ES LA FORMA EN QUE LOS DIRECTORES DE CASTING TE CONOCERÁN ANTES DE VERTE ACTUAR.",
-        price: "25€",
-        src:"/photo7.jpeg",
+        description: "Un fotobook profesional es tu principal carta de presentación como actor o actriz ante los directores de casting.",
+        bg: "bg-blue-100",
+        src:"/photo17.jpeg",
         href: "/servicios/fotobook"
     },
     {
         title: "VIDEOBOOK",
-        description: "UN VIDEOBOOK ES EL ESCAPARATE DE TU CAPACIDAD PARA ACTUAR, TRANSMITIR EMOCIONES Y CONVERTIRTE EN CUALQUIER PERSONAJE FRENTE A LA CÁMARA. ES LA HERRAMIENTA PARA MOSTRAR TU TALENTO ACTORAL EN MOVIMIENTO.",
-        price: "50€",
+        description: "Un videobook es la herramienta clave para mostrar tu capacidad actoral, transmitiendo emociones y transformándote en distintos personajes frente a la cámara.",
+        bg: "bg-blue-100",
         src:"/photo7.jpeg",
         href: "/servicios/videobook"
     },
     {
         title: "COACH ACTORAL",
-        description: "EL SERVICIO DE COACHING ACTORAL OFRECE A LOS ACTORES UN ACOMPAÑAMIENTO PERSONALIZADO PARA PERFECCIONAR SUS HABILIDADES INTERPRETATIVAS, AYUDÁNDOLES A MEJORAR SU MANEJO DE EMOCIONES Y PULIR TÉCNICAS ESCÉNICAS.",
-        price: "100€",
-        src:"/photo7.jpeg",
+        description: "El coaching actoral ofrece un acompañamiento personalizado para que los actores perfeccionen sus habilidades interpretativas y mejoren su manejo de emociones y técnicas escénicas.",
+        bg: "bg-blue-100",
+        src:"/photo8.jpeg",
         href: "/servicios/coach"
     }
 ];
@@ -43,7 +43,7 @@ const servicios = [
             <Card
                 title={service.title}
                 description={service.description}
-                price={service.price}
+                bg={service.bg}
                 href={service.href}
                 src={service.src}
             />

@@ -4,19 +4,19 @@ interface Props {
 	description: string;
 	href: string;
 	src: string;
-	price: string;
+	bg: string;
 }
 
-const { href, title, description, src, price } = Astro.props;
+const { href, title, description, src, bg } = Astro.props;
 ---
 
 <div class="p-4 md:w-1/3 sm:mb-0 mb-6 text-shadow">
 	<div class="rounded-t-lg h-64 overflow-hidden">
 	  <img alt="content" class="object-cover object-center h-full w-full" src={src}>
 	</div>
-	<div class="h-72 rounded-b-lg bg-slate-200 p-5 flex flex-col justify-between">
-	<h2 class="text-2xl md:text-4xl font-medium title-font text-gray-900">{title}</h2>
-	<p class="text-base leading-relaxed mt-2">{description}</p>
+	<div class:list={["h-72 rounded-b-lg bg- p-5 flex flex-col justify-between", bg]}>
+	<h2 class="text-2xl md:text-4xl font-medium title-font text-center text-gray-900">{title}</h2>
+	<p class="text-center text-xl p-5">{description}</p>
 	<a class="text-black inline-flex items-center mt-3" href={href}>MÁS INFORMACIÓN
 	  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
 		<path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -29,4 +29,7 @@ const { href, title, description, src, price } = Astro.props;
     .text-shadow {
         text-shadow: 2px 2px 4px white;
     }
+	.bg-green-custom {
+		background:  #78c78caf ;
+	}
 </style>
