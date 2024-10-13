@@ -4,35 +4,35 @@ import { EMAIL_FROM, EMAIL_DEST  } from "astro:env/client"
 export const prerender = true;
 
 const packs = [{
-    name: "Fotobook Oro",
-    price: 175,
+    name: "Photobook Profesional",
+    price: 180,
 }, {
-    name: "Fotobook Plata",
-    price: 80,
+    name: "Photobook Intermedio",
+    price: 90,
 },
 {
-    name: "Fotobook Bronce",
-    price: 50,
+    name: "Photobook Básico",
+    price: 60,
 },
 {
-    name: "Videobook Monólogo",
-    price: 200,
+    name: "Videobook Completo",
+    price: 425,
 }
     , {
     name: "Videobook Escena",
-    price: 375,
+    price: 300,
 }, {
-    name: "Videobook Completo",
-    price: 500,
+    name: "Videobook Monólogo",
+    price: 200,
 }, {
-    name: "Coach (3h)",
-    price: 50,
+    name: "Coach Profesional",
+    price: 140,
 }, {
-    name: "Coach (9h)",
+    name: "Coach Intermedio",
     price: 100,
 }, {
-    name: "Coach (12h)",
-    price: 150,
+    name: "Coach Básico",
+    price: 50,
 }]
 
 const Form = () => {
