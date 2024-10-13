@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import ImageGallery from "./ImageGallery.tsx";
 
 const images = [
     { src: '/photo1.jpeg', alt: 'Gallery 3' },
@@ -19,9 +20,13 @@ const images = [
     { src: '/photo15.jpeg', alt: 'Gallery 3' },
     { src: '/photo16.jpeg', alt: 'Gallery 3' }
 ]
+
+
 ---
 
-<div
+<ImageGallery client:load images={images} />
+
+<!-- <div
     class="mx-auto container my-8 p-4 columns-2 md:columns-3 lg:columns-4 xl:columns-5"
   >
     {
@@ -37,5 +42,6 @@ const images = [
           loading="lazy"
         />
       ))
+      
     }
-  </div>
+  </div> -->
