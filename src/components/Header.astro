@@ -1,30 +1,27 @@
-<header class="relative flex h-screen overflow-hidden">
+<header class="relative flex h-screen overflow-hidden ">
     <div
-        class="relative z-30 flex flex-col justify-center my-auto mx-6 lg:ml-28 h-auto text-white text-center lg:text-left"
+        class="relative z-30 flex flex-col justify-center items-center my-auto mx-auto w-screen lg:ml-28 h-auto text-white text-center lg:text-left"
     >
         <div class="flex flex-col justify-center text-shadow">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-9xl mb-4 font-semibold">
-                STUDIO FILMS 23
+            <h1 class="text-xl l-spacing sm:text-6xl md:text-7xl lg:text-4xl mb-4 mx-4 font-semibold">
+                STUDIO
+            </h1>
+            <h1 class="text-5xl l-spacing-sm sm:text-6xl md:text-7xl lg:text-9xl mb-4">
+                FILMS 23
             </h1>
 
-            <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl">
-                SI ESTÁS BUSCANDO IMPULSAR TU CARRERA Y TENER UNA IMAGEN MÁS
-                PROFESIONAL, SOMOS TU ESTUDIO
-            </h2>
+            <div class="my-10 w-full font-text">
+                <p class="text-sm p-3 md:text-xl lg:text-2xl l-spacing-xs">
+                    SI ESTÁS BUSCANDO IMPULSAR TU CARRERA Y TENER UNA IMAGEN MÁS
+                    PROFESIONAL
+                </p>
+                <p class="p-3 mt-10 text-3xl text-center lg:text-5xl">SOMOS TU ESTUDIO</p>
+            </div>
+            
         </div>
 
         <div
-            class="my-10 flex flex-row justify-center lg:justify-evenly text-shadow space-x-2 sm:space-y-0 sm:space-x-4 lg:space-x-0"
-        >
-            <span class="text-sm sm:text-lg lg:text-xl">FOTOBOOK ACTORAL</span>
-            <span class="hidden md:block">|</span>
-            <span class="text-sm sm:text-lg lg:text-xl">VIDEOBOOK</span>
-            <span class="hidden md:block">|</span>
-            <span class="text-sm sm:text-lg lg:text-xl">COACH ACTORAL</span>
-        </div>
-
-        <div
-            class="mt-8 w-[60%] items-center m-auto flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 lg:gap-24"
+            class="mt-16 w-[60%] items-center m-auto flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 lg:gap-24"
         >
            
                 <a class="px-8 sm:px-12 py-3 sm:py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black" href="/servicios/fotobook">SERVICIOS</a>
@@ -61,7 +58,7 @@
     }
 
     .b-opacity {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(88, 14, 14, 0.925);
         position: absolute;
         left: 0;
         top: 0;
@@ -69,7 +66,17 @@
         bottom: 0;
         z-index: 1;
         object-fit: cover;
+        opacity: 0.83;
         width: 100%;
         height: 100%;
+    }
+    .l-spacing {
+        letter-spacing: 0.8em;
+    }
+    .l-spacing-sm {
+        letter-spacing: 0.2em;
+    }
+    .l-spacing-xs {
+        letter-spacing: 0.1em;
     }
 </style>

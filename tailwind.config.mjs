@@ -6,9 +6,10 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Noto Sans Lao Variable', ...defaultTheme.fontFamily.sans],
+				sans: ['Courier Prime', ...defaultTheme.fontFamily.sans],
+				text:['Oswald Variable', ...defaultTheme.fontFamily.sans],
 			  },
-		},
+		}
 	},
 	plugins: [],
 }

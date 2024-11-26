@@ -3,8 +3,8 @@ import Card from "./Card.astro";
 
 const servicios = [
     {
-        title: "FOTOBOOK ACTORAL",
-        description: "Un fotobook profesional es tu principal carta de presentación como actor o actriz ante los directores de casting.",
+        title: "BOOK ACTORAL",
+        description: "Tu carta de presentación ante los directores de casting, agencias, productores.",
         bg: "bg-blue-100",
         src:"/photo17.jpeg",
         href: "/servicios/fotobook"
@@ -18,7 +18,7 @@ const servicios = [
     },
     {
         title: "COACH ACTORAL",
-        description: "El coaching actoral ofrece un acompañamiento personalizado para que los actores perfeccionen sus habilidades interpretativas y mejoren su manejo de emociones y técnicas escénicas.",
+        description: "Ofrecemos un acompañamiento personalizado para perfeccionar tus habilidades interpretativas y mejores el manejo de las emociones y técnicas frente a la cámara.",
         bg: "bg-blue-100",
         src:"/photo8.jpeg",
         href: "/servicios/coach"
@@ -29,12 +29,12 @@ const servicios = [
 <section class="text-gray-600 body-font h-max lg:h-screen" id="servicios">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col">
-        <div class="h-1 bg-gray-200 rounded overflow-hidden">
-          <div class="w-24 h-full bg-black"></div>
+        
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 ">
+          <h1 class="sm:w-2/5 text-gray-900 text-shadow font-medium title-font custom-text mb-2 sm:mb-0">SERVICIOS</h1>
         </div>
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">SERVICIOS</h1>
-          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Cada uno de nuestros servicios está diseñado para impulsar tu carrera y ayudarte a destacarte en la industria audiovisual.</p>
+        <div class="h-1 bg-gray-200 rounded overflow-hidden mb-12">
+          <div class="w-80 h-full bg-main"></div>
         </div>
       </div>
       <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
@@ -52,3 +52,18 @@ const servicios = [
       </div>
     </div>
   </section>
+
+  <style>
+    .custom-text{
+      font-size: 2.7rem /* 36px */;
+      line-height: 3rem;
+      letter-spacing: 0.2em;
+    }
+
+    .bg-main {
+      background-color: #500606;
+    }
+    .text-shadow {
+        text-shadow: 1px 1px 2px black;
+    }
+</style>

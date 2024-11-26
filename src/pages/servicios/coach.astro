@@ -12,8 +12,8 @@ const serv = [{
         "Mejora en la proyección vocal",
         "Trabajo frente a la cámara",
     ],
-    borderColor: "border-gray-400",
-    buttonColor: "bg-gray-400"
+    borderColor: "border-basic",
+    buttonColor: "bg-basic"
 
   },
   {
@@ -27,8 +27,8 @@ const serv = [{
         "Mejora en la proyección vocal",
         "Trabajo frente a la cámara",
     ],
-    borderColor: "border-slate-500",
-    buttonColor: "bg-slate-500"
+    borderColor: "border-inter",
+    buttonColor: "bg-inter"
   },
   {
     title: "PROFESIONAL",
@@ -41,8 +41,8 @@ const serv = [{
         "Mejora en la proyección vocal",
         "Trabajo frente a la cámara",
     ],
-    borderColor: "border-black",
-    buttonColor: "bg-black"
+    borderColor: "border-main",
+    buttonColor: "bg-main"
   }
 
   
@@ -60,10 +60,10 @@ interface Props {
           <div class="flex flex-col text-center w-full mb-16">
             <h1 class="text-3xl sm:text-6xl font-medium title-font mb-2 p-5 text-gray-900">COACH ACTORAL</h1>
             <p class="lg:w-4/5 mx-auto leading-relaxed text-sm sm:text-base text-gray-500 p-2">Un coach actoral es tu mejor guía para desarrollar y perfeccionar tu talento, preparando tu camino antes de que los directores de casting te vean en acción.</p>
-            <div class="flex mx-auto border-2 border-black rounded overflow-hidden mt-6">
-              <a class="py-1 px-4 cursor-pointer" href="/servicios/fotobook">Fotobook</a>
-              <a class="py-1 px-4 border-l-black border-l-2 cursor-pointer" href="/servicios/videobook">Videobook</a>
-              <a class="py-1 px-4  bg-black text-white cursor-default">Coach Actoral</a>
+            <div class="flex mx-auto border-main rounded overflow-hidden mt-6">
+              <a class="py-1 px-4 cursor-pointer" href="/servicios/fotobook">Book Actoral </a>
+              <a class="py-1 px-4 border-l-main cursor-pointer" href="/servicios/videobook">Videobook</a>
+              <a class="py-1 px-4  bg-main text-white cursor-default">Coach Actoral</a>
             </div>
           </div>
           <div class="flex flex-wrap justify-center mb-8 gap-x-10 w-[80%] md:w-full m-auto">
@@ -72,13 +72,10 @@ interface Props {
               serv.map((servicio) => (
               <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
               <div class:list={["h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden",servicio.borderColor]}>
-                <h2 class="text-sm tracking-widest title-font mb-1 font-bold">{servicio.title}</h2>
-                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-                  <span>{servicio.price}€</span>
-                  <span class="text-lg ml-1 font-normal text-black">/sesión</span>
-                </h1>
+                <h1 class="text-3xl l-spacing tracking-widest title-font mb-4 font-bold text-black">{servicio.title}</h1>
+                
                 {servicio.atributtes.map((atributte) => (
-                  <p class:list={["flex items-center text-black mb-2",
+                  <p class:list={["flex items-center text-black font-text mb-2",
                   atributte === servicio.atributtes[servicio.atributtes.length - 1] && "mb-6"]
                   }>
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-black text-white rounded-full flex-shrink-0">
@@ -106,3 +103,30 @@ interface Props {
         </div>
       </section>
 </LayoutSecondary>
+
+<style>
+  .bg-main {
+    background:  #500606 ;
+  } 
+  .bg-inter {
+    background:  #8B5050 ;
+  }
+  .bg-basic {
+    background:  #AC7474 ;
+  }
+  .border-inter {
+    border: 2px solid #8B5050;
+  }
+  .border-basic {
+    border: 2px solid #AC7474;
+  }
+  .border-main {
+    border: 2px solid #500606;
+  }
+  .border-l-main{
+    border-left: 2px solid #500606;
+  }
+  .l-spacing {
+    letter-spacing: 0.2em;
+  }
+</style>
