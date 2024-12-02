@@ -61,9 +61,9 @@ interface Props {
             <h1 class="text-3xl sm:text-6xl font-medium title-font mb-2 p-5 text-gray-900">COACH ACTORAL</h1>
             <p class="lg:w-4/5 mx-auto leading-relaxed text-sm sm:text-base text-gray-500 p-2">Un coach actoral es tu mejor guía para desarrollar y perfeccionar tu talento, preparando tu camino antes de que los directores de casting te vean en acción.</p>
             <div class="flex mx-auto border-main rounded overflow-hidden mt-6">
-              <a class="py-1 px-4 cursor-pointer" href="/servicios/fotobook">Book Actoral </a>
-              <a class="py-1 px-4 border-l-main cursor-pointer" href="/servicios/videobook">Videobook</a>
-              <a class="py-1 px-4  bg-main text-white cursor-default">Coach Actoral</a>
+              <a class="py-2 px-4 cursor-pointer" href="/servicios/book">BOOK ACTORAL</a>
+              <a class="py-2 px-4 border-l-main cursor-pointer" href="/servicios/videobook">VIDEOBOOK ACTORAL</a>
+              <a class="py-2 px-4 bg-main text-white cursor-default">COACH ACTORAL</a>
             </div>
           </div>
           <div class="flex flex-wrap justify-center mb-8 gap-x-10 w-[80%] md:w-full m-auto">
@@ -72,7 +72,7 @@ interface Props {
               serv.map((servicio) => (
               <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
               <div class:list={["h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden",servicio.borderColor]}>
-                <h1 class="text-3xl l-spacing tracking-widest title-font mb-4 font-bold text-black">{servicio.title}</h1>
+                <h1 class="text-2xl sm:text-3xl l-spacing tracking-widest title-font mb-4 font-bold text-black">{servicio.title}</h1>
                 
                 {servicio.atributtes.map((atributte) => (
                   <p class:list={["flex items-center text-black font-text mb-2",

@@ -4,14 +4,14 @@ import { EMAIL_FROM, EMAIL_DEST  } from "astro:env/client"
 export const prerender = true;
 
 const packs = [{
-    name: "Photobook Profesional",
+    name: "Book Profesional",
     price: 180,
 }, {
-    name: "Photobook Intermedio",
+    name: "Book Intermedio",
     price: 90,
 },
 {
-    name: "Photobook Básico",
+    name: "Book Básico",
     price: 60,
 },
 {
@@ -60,7 +60,7 @@ const Form = () => {
                 body: JSON.stringify({
                     to: EMAIL_DEST,
                     from: EMAIL_FROM,
-                    subject: email + " - " + pack + "€",
+                    subject: email + " - " + pack,
                     html: finalHtml,
                     text: finalHtml,
                 }),
@@ -77,17 +77,17 @@ const Form = () => {
     return (
 
         <form method="POST" onSubmit={handleSubmit} id="form"
-            className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+            className="lg:w-1/3 flex flex-col md:ml-auto md:w-[90%] md:m-auto w-full md:py-8 mt-8 md:mt-0"
         >
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Formulario
+            <h2 className="text-gray-900 text-2xl mb-1 font-medium title-font">
+                FORMULARIO
             </h2>
-            <p className="leading-relaxed mb-5 text-gray-600">
+            <p className="leading-relaxed font-text mb-5 text-gray-600">
                 Rellena el formulario y nos pondremos en contacto contigo.
             </p>
             <div className="relative mb-4">
-                <label htmlFor="name" className="leading-7 text-sm text-gray-600"
-                >Nombre
+                <label htmlFor="name" className="leading-7 text-lg text-gray-600"
+                >NOMBRE
                 </label>
                 <input
                     onChange={(e) => setName(e.target.value)}
@@ -96,13 +96,12 @@ const Form = () => {
                     name="name"
                     value={name}
                     placeholder="Introduzca su nombre"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full font-text rounded border bg-[#f3f0f0] border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
             </div>
             <div className="relative mb-4">
-                <label htmlFor="email" className="leading-7 text-sm text-gray-600"
-                >Email</label
-                >
+                <label htmlFor="email" className="leading-7 text-lg text-gray-600"
+                >EMAIL</label>
                 <input
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
@@ -110,42 +109,41 @@ const Form = () => {
                     name="email"
                     value={email}
                     placeholder="Introduzca su email"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full font-text rounded bg-[#f3f0f0] border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
             </div>
             <div className="relative mb-4">
-                <label htmlFor="pack" className="leading-7 text-sm text-gray-600"
-                >Selecciona pack</label
-                ><select
-                defaultValue="Fotobook Oro 175"
+                <label htmlFor="pack" className="leading-7 text-lg text-gray-600"
+                >SELECCIONA PACK</label><select
+                defaultValue="Book Profesional"
                     name="pack"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-[#f3f0f0] font-text rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     id="pack"
                     value={pack}
                     onChange={(e) => { setPack(e.target.value) }}>
                     {packs.map((pack) => (
-                       <option key={pack.name} value={pack.name + " " + pack.price}>{pack.name} - {pack.price}€</option>
+                       <option key={pack.name} value={pack.name}>{pack.name}</option>
                     ))}
 
                 </select>
             </div>
             <div className="relative mb-4">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600"
-                >Mensaje</label>
+                <label htmlFor="message" className="leading-7 text-lg text-gray-600"
+                >MENSAJE</label>
                 <textarea
                     onChange={(e) => setMessage(e.target.value)}
                     id="message"
                     name="message"
                     value={message}
                     placeholder="Introduzca su mensaje"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-[#f3f0f0] font-text rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
             </div>
             <button type="submit"
                 className=" py-2 px-6 text-lg rounded-lg font-bold text-black border-2 border-black hover:bg-black hover:text-white"
             >Enviar
             </button>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="text-md font-text text-gray-500 mt-3">
                 Si no estás interesado en ningún pack en concreto, puedes indicarlo en el mensaje y te asesoraremos en lo que más se ajuste a tu perfil.
             </p>
         </form>

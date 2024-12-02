@@ -1,29 +1,95 @@
----
-import Photo from "./Photo.astro";
-import { Image } from 'astro:assets';
 
-const photos = [
-    { src: '/photo1.jpeg', alt: 'Gallery 1' },
-    { src: '/photo9.jpeg', alt: 'Gallery 9' },
-    { src: '/photo3.jpeg', alt: 'Gallery 3' },
-    { src: '/photo12.jpeg', alt: 'Gallery 1' },
-    { src: '/photo13.jpeg', alt: 'Gallery 1' },
-    { src: '/photo2.jpeg', alt: 'Gallery 3' },
-    { src: '/photo16.jpeg', alt: 'Gallery 3' },
-    { src: '/photo11.jpeg', alt: 'Gallery 1' }
-];
----
-<section class="text-gray-600 body-font h-max">
+ <section class="text-gray-600 body-font h-max">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col">
-        <div class="h-1 bg-gray-200 rounded overflow-hidden">
-          <div class="w-24 h-full bg-black"></div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 ">
+          <h1 class="sm:w-2/5 text-gray-900 text-shadow font-medium title-font custom-text mb-2 sm:mb-0">NOSOTROS</h1>
         </div>
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">SOBRE NOSOTROS</h1>
-          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">En Studio Films 23,about...</p>
+        <div class="h-1 bg-gray-200 rounded overflow-hidden mb-12">
+          <div class="w-80 h-full bg-main"></div>
         </div>
-      </div>
-      
     </div>
+    
+    <article class="mb-10">
+      <h2 class="text-xl mb-2">¿QUIÉNES SOMOS?</h2>
+      <p class="font-text">Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
+        dirección, guion, fotografía y producción. Nos dedicamos a acompañar a actores y actrices
+        en su desarrollo profesional, ofreciendo herramientas y recursos diseñados para destacar
+        su talento y ayudarlos a construir una carrera sólida en el sector</p>
+    </article>
+    <article class="mb-10 ">
+      <h2 class="text-xl mb-2">NUESTRO PROPÓSITO</h2>
+      <p class="font-text">Sabemos que cada actor y actriz tiene una esencia única, una historia que merece ser
+        contada de forma auténtica y profesional. Por eso, trabajamos contigo para crear materiales
+        que hablen de quién eres y reflejen todo lo que puedes aportar a la industria.</p>
+    </article>
+    <article class="mb-10 ">
+      <h2 class="text-xl mb-2">¿QUÉ HACEMOS POR TI?</h2>
+      <ul>
+        <li>
+          <h4>Books Actorales y Videobooks</h4>
+          <p class="font-text">Diseñamos y producimos materiales visuales de
+            alta calidad que capturan tu esencia y te posicionan con fuerza frente a directores de
+            casting y productores</p>
+        </li>
+        <li>
+          <h4>Coaching Actoral Personalizado</h4>
+          <p class="font-text">Más que preparación, te brindamos confianza.
+          Te ayudamos a abordar castings, construir personajes o afrontar proyectos con
+          seguridad y precisión</p>
+        </li>
+        <li>
+          <h4>
+            Acompañamiento Integral
+          </h4>
+          <p class="font-text">
+            Desde la actualización de tu material hasta el
+            asesoramiento para proyectar tu carrera, estamos contigo en cada paso del proceso.
+          </p>
+        </li>
+      </ul>
+    </article>
+    <article class="mb-10 ">
+      <h2 class="text-xl mb-2">NUESTRA EXPERIENCIA</h2>
+      <p class="font-text">Contamos con un sólido recorrido en la creación y producción de contenido audiovisual,
+        incluyendo la dirección, producción y guionización de cortometrajes. Esta experiencia nos
+        permite entender los desafíos del sector y trabajar contigo desde una perspectiva práctica y
+        profesional.</p>
+    </article>
+    <article class="mb-10 ">
+      <h2 class="text-xl mb-2">¿POR QUÉ ELEGIRNOS?</h2>
+      <p class="font-text">En un mundo tan competitivo como el audiovisual, creemos que el éxito no solo se trata de
+        talento, sino también de contar con el respaldo adecuado. Nos comprometemos a ofrecerte
+        un servicio cercano, empático y enfocado en tus metas. Más allá de la técnica, construimos
+        relaciones basadas en la confianza y la pasión compartida por el arte.</p>
+    </article>
+    <article class="mb-10 ">
+      <p class="font-text">Estamos aquí para ayudarte a dar el siguiente paso, para que tu talento no pase
+        desapercibido y puedas alcanzar las oportunidades que mereces. Juntos, podemos
+        convertir tus sueños en realidad.</p>
+    </article>
+   
   </section>
+  <style>
+    .custom-text{
+      font-size: 2.7rem /* 36px */;
+      line-height: 3rem;
+      letter-spacing: 0.2em;
+    }
+
+    @media (max-width: 660px) {
+      .custom-text {
+        font-size: 2.1rem;
+        line-height: 1rem;
+        letter-spacing: 0.2em;
+      }
+    }
+
+    .bg-main {
+      background-color: #500606;
+    }
+    .text-shadow {
+        text-shadow: 1px 1px 2px black;
+    }
+</style> 
+

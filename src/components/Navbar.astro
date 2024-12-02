@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 
 interface Props {
   page: string;
@@ -16,7 +15,7 @@ const { page } = Astro.props;
       class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
     >
     <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/logo-icono-final.PNG">
-      <span class="ml-3 text-xl">Studio Films 23</span>
+      <span class="ml-3 text-xl">STUDIO FILMS 23</span>
     </div>
     <nav
       class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center sm:gap-10 gap-2"
@@ -24,23 +23,23 @@ const { page } = Astro.props;
       <a
         class="inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
         href="/"
-        >Inicio</a
+        >INICIO</a
       >
       <a
         class:list={['inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0',
         page === 'galeria' && 'text-gray-900 bg-gray-200']}
         href="/galeria"
       >
-        Galería
+        GALERÍA
       </a>
       <a
       class:list={['inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0',
         page === 'servicios' && 'text-gray-900 bg-gray-200']}
-        href="/servicios/fotobook">Servicios</a
+        href="/servicios/book">SERVICIOS</a
       >
       <a
         class="inline-flex items-center cursor-pointer  border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0"
-        href="/#contacto">Contacto</a
+        href="/#contacto">CONTACTO</a
       >
     </nav>
   </div>
