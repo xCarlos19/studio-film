@@ -82,9 +82,10 @@
     }
 </style>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-            const video = document.getElementById("hero-vid") as HTMLVideoElement;
+    document.addEventListener("astro:page-load", function () {
     
+            const video = document.getElementById("hero-vid") as HTMLVideoElement;
+
             // Reinicia el video forzando su recarga
             if (video) {
                 video.pause();
