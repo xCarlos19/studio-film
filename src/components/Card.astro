@@ -14,7 +14,7 @@ const { href, title, description, src, bg } = Astro.props;
 	<div class="rounded-t-lg h-64 overflow-hidden">
 	  <img alt="content" class="object-cover object-center h-full w-full" src={src}>
 	</div>
-	<div class:list={["md:h-72 rounded-b-lg p-5 flex flex-col justify-between h-fit bg-main"]}>
+	<div class:list={["md:h-72 rounded-b-lg p-5 flex flex-col justify-between h-fit bg-alternative"]}>
 	<h2 class="text-2xl md:text-4xl font-medium title-font text-center text-white text-shadow">{title}</h2>
 	<p class="text-justify text-white text-lg p-4 font-text">{description}</p>
 	<a class="text-white inline-flex items-center mt-3" href={href}>MÁS INFORMACIÓN
@@ -36,6 +36,6 @@ const { href, title, description, src, bg } = Astro.props;
       background-color: #500606;
     }
 	.bg-alternative {
-		background-image: linear-gradient(to  bottom,#500606 60%, #aa6d6d );
+		background-image: linear-gradient(to  bottom right,#500606 50% , #180101 );
 	}
 </style>

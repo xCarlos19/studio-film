@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Form from "./Form";
 
 ---
@@ -16,7 +15,13 @@ import Form from "./Form";
         </div>
         <div class="flex flex-wrap lg:flex-nowrap">
             
-            <img src="/logo-final.jpeg" alt="Image from album" width="760px" class="rounded border border-transparent m-auto" loading="lazy" />
+            <!-- <img src="/logo-final.jpeg" alt="Image from album" width="740px" class="rounded-full object-cover m-auto " loading="lazy" /> -->
+            <div class=" custom-img m-auto relative">
+              <img src="/logo-final.jpeg" 
+                   alt="Image from album" 
+                   class="rounded-full object-cover w-full h-full shadow-[12px_12px_25px_rgba(0,0,0,0.5)]" 
+                   loading="lazy" />
+          </div>
             
 
             <Form client:load />
@@ -27,6 +32,17 @@ import Form from "./Form";
 </section>
 
 <style>
+  .custom-img{
+    width: 600px;
+    height: 600px;
+  }
+
+  @media (max-width: 660px) {
+    .custom-img {
+      width: 300px;
+      height: 300px;
+    
+  }}
     .custom-text{
       font-size: 2.7rem /* 36px */;
       line-height: 3rem;
