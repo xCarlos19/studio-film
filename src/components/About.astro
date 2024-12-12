@@ -1,28 +1,50 @@
+---
+import BoxReveal from "./BoxReveal";
+import { motion } from "motion/react"
+---
+
 
  <section class="text-black body-font h-max  container px-5 py-24 mx-auto">
 
     
     
-    <article class="flex items-center gap-5 mb-10 m-auto w-[80%] ">
+    <article class="flex flex-col sm:flex-row items-center gap-5 mb-10 m-auto w-[90%] ">
       
-      <div class="w-[60%] m-auto"> 
-      <h3 class="text-5xl mb-4">¿QUIENES SOMOS?</h3>
-      <p class="font-text text-xl text-justify w-[80%] ">Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
+      <div class="w-auto sm:w-[60%] m-auto"> 
+      <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}><h3 class="text-center text-5xl mb-4">¿QUIENES SOMOS?</h3></BoxReveal>
+      <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}>
+        <p class="font-text text-xl text-justify w-auto sm:w-[80%] ">Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
         dirección, guion, fotografía y producción. Nos dedicamos a acompañar a actores y actrices
         en su desarrollo profesional, ofreciendo herramientas y recursos diseñados para destacar
         su talento y ayudarlos a construir una carrera sólida en el sector</p>
+      </BoxReveal>
       </div>
       <img src="/photo18.jpg" alt="Image from album" width="480px" loading="lazy" class="rounded-md" />
     </article>
-  
-    <article class="mb-10 flex w-[80%] m-auto">
+
+
+    
+
+    <article class="mb-10 flex w-[90%] m-auto">
       
       <p class="font-text text-xl">Sabemos que cada actor y actriz tiene una esencia única, una historia que merece ser
         contada de forma auténtica y profesional. Por eso, trabajamos contigo para crear materiales
         que hablen de quién eres y reflejen todo lo que puedes aportar a la industria.</p>
         
     </article>
-    <article class="mb-10 ">
+    <article class="flex flex-col sm:flex-row items-center gap-12 mb-10 m-auto w-[90%] ">
+      <img src="/photo18.jpg" alt="Image from album" width="480px" loading="lazy" class="rounded-md" />
+      <div class="w-auto sm:w-[60%] m-auto"> 
+      <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}><h3 class="text-center text-5xl mb-4">NUESTRA EXPERIENCIA</h3></BoxReveal>
+      <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}>
+        <p class="font-text text-xl text-justify w-auto sm:w-[90%] ">Contamos con un sólido recorrido en la creación y producción de contenido audiovisual,
+          incluyendo la dirección, producción y guionización de cortometrajes. Esta experiencia nos
+          permite entender los desafíos del sector y trabajar contigo desde una perspectiva práctica y
+          profesional.</p>
+      </BoxReveal>
+      </div>
+    </article>
+    <!-- <article class="mb-10 ">
       <h2 class="text-xl mb-2">¿QUÉ HACEMOS POR TI?</h2>
       <ul>
         <li>
@@ -47,25 +69,22 @@
           </p>
         </li>
       </ul>
-    </article>
-    <article class="mb-10 ">
-      <h2 class="text-xl mb-2">NUESTRA EXPERIENCIA</h2>
-      <p class="font-text">Contamos con un sólido recorrido en la creación y producción de contenido audiovisual,
-        incluyendo la dirección, producción y guionización de cortometrajes. Esta experiencia nos
-        permite entender los desafíos del sector y trabajar contigo desde una perspectiva práctica y
-        profesional.</p>
-    </article>
-    <article class="mb-10 ">
-      <h2 class="text-xl mb-2">¿POR QUÉ ELEGIRNOS?</h2>
-      <p class="font-text">En un mundo tan competitivo como el audiovisual, creemos que el éxito no solo se trata de
+    </article> -->
+
+    <article class="mb-10 w-[90%] m-auto ">
+      <motion.p client:load initial={{ filter: "blur(20px)", opacity: 0 }}
+      whileInView={{ filter: "blur(0px)", opacity: 1 }}
+      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-text text-xl text-justify w-auto sm:w-[90%] ">En un mundo tan competitivo como el audiovisual, creemos que el éxito no solo se trata de
         talento, sino también de contar con el respaldo adecuado. Nos comprometemos a ofrecerte
         un servicio cercano, empático y enfocado en tus metas. Más allá de la técnica, construimos
-        relaciones basadas en la confianza y la pasión compartida por el arte.</p>
+        relaciones basadas en la confianza y la pasión compartida por el arte.</motion.p>
     </article>
-    <article class="mb-10 ">
-      <p class="font-text">Estamos aquí para ayudarte a dar el siguiente paso, para que tu talento no pase
+    <article class="mb-10 w-[90%] m-auto ">
+      <motion.p client:load initial={{ filter: "blur(20px)", opacity: 0 }}
+      whileInView={{ filter: "blur(0px)", opacity: 1 }}
+      transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true }} className="font-text text-xl text-justify w-auto sm:w-[90%] ">Estamos aquí para ayudarte a dar el siguiente paso, para que tu talento no pase
         desapercibido y puedas alcanzar las oportunidades que mereces. Juntos, podemos
-        convertir tus sueños en realidad.</p>
+        convertir tus sueños en realidad.</motion.p>
     </article>
    
   </section>
@@ -91,4 +110,5 @@
         text-shadow: 1px 1px 2px black;
     }
 </style> 
+
 
