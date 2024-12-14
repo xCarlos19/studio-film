@@ -1,0 +1,42 @@
+---
+interface Props {
+	src: string;
+}
+import '@fontsource-variable/oswald';
+const { src } = Astro.props;
+---
+
+<div class="p-4 md:w-[90%] h-[640px] m-auto sm:mb-0 mb-6 bg-main flex items-center md:flex-col ">
+	
+		
+		
+			<h1 class=" text-white text-4xl font-bold p-4">
+				QUIÉNES SOMOS
+			</h1>
+			<div class="w-[4px] h-[screen] bg-white" ></div>
+			<p class="font-text text-md text-white ">
+				Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
+        	dirección, guion, fotografía y producción. <br>Nos dedicamos a acompañar a actores y actrices
+        	en su desarrollo profesional, ofreciendo herramientas y recursos diseñados para destacar
+        	su talento y ayudarlos a construir una carrera sólida en el sector.
+			</p>
+
+	  </div>
+
+
+
+  <style>
+    .text-shadow {
+        text-shadow: 4px 4px 8px black;
+    }
+	.bg-green-custom {
+		background:  #78c78caf ;
+	}
+	.bg-main {
+      background-color: #500606;
+	  opacity: 0.8;
+    }
+	.bg-alternative {
+		background-image: linear-gradient(to  bottom right,#500606 50% , #180101 );
+	}
+</style>

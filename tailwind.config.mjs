@@ -9,6 +9,7 @@ export default {
 			fontFamily: {
 				sans: ['Courier Prime', ...defaultTheme.fontFamily.sans],
 				text:['Oswald Variable', ...defaultTheme.fontFamily.sans],
+				cursive:['Dancing Script Variable', ...defaultTheme.fontFamily.sans],
 			  },
 		},
 		animation: {
