@@ -1,9 +1,6 @@
 ---
 import BoxReveal from "./BoxReveal";
 import { motion } from "motion/react"
-
-const text = "Juntos, podemos convertir tus sueños en realidad.";
-const letters = text.split("");
 ---
 
 
@@ -34,8 +31,6 @@ const letters = text.split("");
           permite entender los desafíos del sector y trabajar contigo desde una perspectiva práctica y
           profesional.</p>
       </BoxReveal>
-      
-      <!-- <img src="/photo18.jpg" alt="Image from album" width="480px" loading="lazy" class="rounded-md" /> -->
     </article>
 
     <article class="mb-10 flex w-[90%] m-auto">
@@ -65,16 +60,6 @@ const letters = text.split("");
       whileInView={{ filter: "blur(0px)", opacity: 1 }}
       transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-cursive text-4xl text-center w-auto mb-10 sm:w-[90%] ">Juntos, podemos
       convertir tus sueños en realidad.</motion.p> 
-<!--       {letters.map((letter, index) => (
-            <motion.p 
-              initial= {{ opacity: 0 }},
-              animate= {{ opacity: 1 }},
-              transition={{ duration: 0.2, delay: index * 0.1 }},
-              style= {{ display: 'inline-block' }}
-            >
-              {letter}
-            </motion.p>
-          ))} -->
         
     </article>
    
