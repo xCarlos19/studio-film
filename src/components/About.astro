@@ -4,7 +4,8 @@ import { motion } from "motion/react"
 ---
 
 
- <section class="text-black body-font container py-24 mx-auto">
+ <section class="text-black body-font w-[90%] mx-auto">
+  <div class="container px-5 pt-24 mx-auto">
 
   <div class="flex flex-col">
     <div class="flex flex-wrap sm:flex-row flex-col py-6 ">
@@ -15,18 +16,18 @@ import { motion } from "motion/react"
     </div>
   </div>
     
-    <article class="flex flex-row justify-between sm:flex-row mb-10 m-auto ">
+    <article class="flex flex-col justify-between sm:flex-row w-[100%] mb-10 gap-10 m-auto">
       
       
       <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}>
-        <p class="font-text text-xl text-justify w-auto sm:w-[80%] ">Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
+        <p class="font-text text-xl ">Somos un equipo de profesionales apasionados por el arte audiovisual, con experiencia en
         dirección, guion, fotografía y producción. <br> Nos dedicamos a acompañar a actores y actrices
         en su desarrollo profesional, ofreciendo herramientas y recursos diseñados para destacar
         su talento y ayudarlos a construir una carrera sólida en el sector.</p>
       </BoxReveal>
 
       <BoxReveal client:load boxColor={"#8B5050"} duration={0.6}>
-        <p class="font-text text-xl text-justify w-auto sm:w-[90%] ">Contamos con un sólido recorrido en la creación y producción de contenido audiovisual,
+        <p class="font-text text-xl">Contamos con un sólido recorrido en la creación y producción de contenido audiovisual,
           incluyendo la dirección, producción y guionización de cortometrajes. Esta experiencia nos
           permite entender los desafíos del sector y trabajar contigo desde una perspectiva práctica y
           profesional.</p>
@@ -37,17 +38,17 @@ import { motion } from "motion/react"
       
       <motion.p client:load initial={{ filter: "blur(20px)", opacity: 0 }}
       whileInView={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-text text-2xl text-center w-auto sm:w-[90%]">Sabemos que cada actor y actriz tiene una esencia única, una historia que merece ser
-        contada de forma auténtica y profesional. Por eso, trabajamos contigo para crear materiales
+      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-text text-2xl text-center w-auto m-auto">Sabemos que cada actor y actriz tiene una esencia única, una historia que merece ser
+        contada de forma auténtica y profesional. <br>Por eso, trabajamos contigo para crear materiales
         que hablen de quién eres y reflejen todo lo que puedes aportar a la industria.</p>
         
     </article>
 
-    <article class=" sm:flex-col m-auto ">
+    <article class=" sm:flex-col w-[90%] m-auto ">
       
       <motion.p client:load initial={{ filter: "blur(20px)", opacity: 0 }}
       whileInView={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-text text-xl text-center w-auto mb-10 sm:w-[90%] ">En un mundo tan competitivo como el audiovisual, creemos que el éxito no solo se trata de
+      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-text text-xl text-center  mb-10 ">En un mundo tan competitivo como el audiovisual, creemos que el éxito no solo se trata de
         talento, sino también de contar con el respaldo adecuado. 
         <br>Nos comprometemos a ofrecerte
         un servicio cercano, empático y enfocado en tus metas. Más allá de la técnica, construimos
@@ -58,11 +59,11 @@ import { motion } from "motion/react"
         <motion.p client:load 
         initial={{ filter: "blur(20px)", opacity: 0 }}
       whileInView={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-cursive text-4xl text-center w-auto mb-10 sm:w-[90%] ">Juntos, podemos
+      transition={{ duration: 1.5, ease: "easeOut" } } viewport={{ once: true }} className="font-cursive text-4xl text-center w-auto m-auto mb-10">Juntos, podemos
       convertir tus sueños en realidad.</motion.p> 
         
     </article>
-   
+  </div>
   </section>
   <style>
     .custom-text{
@@ -73,8 +74,8 @@ import { motion } from "motion/react"
 
     @media (max-width: 660px) {
       .custom-text {
-        font-size: 2.1rem;
-        line-height: 1rem;
+        font-size: 2rem;
+        line-height: 2rem;
         letter-spacing: 0.2em;
       }
     }

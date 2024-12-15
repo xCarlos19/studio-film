@@ -1,0 +1,57 @@
+---
+import LayoutSecondary from "../layouts/LayoutSecondary.astro";
+import Form from "../components/Form";
+---
+<LayoutSecondary title="Contacto", page="contacto">
+    <section class="text-gray-600 body-font h-max lg:h-max" id="contacto">
+        <div class="container px-5 py-2 mx-auto">
+            <div class="flex flex-wrap lg:flex-nowrap">
+                <div class=" custom-img m-auto relative">
+                  <img src="/logo-final.png" 
+                       alt="Image from album" 
+                       class="rounded-full object-cover w-full h-full shadow-[12px_12px_25px_rgba(0,0,0,0.5)]" 
+                       loading="lazy" />
+              </div>
+                
+    
+                <Form client:load />
+                
+            </div>
+        </div>
+        
+    </section>
+</LayoutSecondary>
+
+<style>
+    .custom-img{
+      width: 600px;
+      height: 600px;
+    }
+  
+    @media (max-width: 660px) {
+      .custom-img {
+        width: 300px;
+        height: 300px;
+      
+    }}
+      .custom-text{
+        font-size: 2.7rem /* 36px */;
+        line-height: 3rem;
+        letter-spacing: 0.2em;
+      }
+  
+      @media (max-width: 660px) {
+        .custom-text {
+          font-size: 2.1rem;
+          line-height: 1rem;
+          letter-spacing: 0.2em;
+        }
+      }
+  
+      .bg-main {
+        background-color: #500606;
+      }
+      .text-shadow {
+          text-shadow: 1px 1px 2px black;
+      }
+  </style>

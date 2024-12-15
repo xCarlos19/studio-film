@@ -87,7 +87,9 @@ interface Props {
                 ]}>POPULAR</span>
                 
                 {
-                servicio === serv[serv.length - 1] ? <ButtonBackgroundShine path="/#contacto" text="Reservar"></ButtonBackgroundShine> : <a class:list={["flex items-center mt-auto text-white  border-0 py-2 px-4 w-full focus:outline-none hover:scale-105 duration-150 rounded cursor-pointer", servicio.buttonColor ]} href="/#contacto">Reservar
+                servicio === serv[serv.length - 1] ? 
+                <ButtonBackgroundShine text="Reservar" path="/contacto" /> : 
+                <a class:list={["flex items-center mt-auto text-white border-0 py-2 px-4 w-full focus:outline-none hover:scale-105 duration-150 rounded cursor-pointer", servicio.buttonColor ]} href="/#contacto">Reservar
                   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>

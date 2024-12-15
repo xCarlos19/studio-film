@@ -2,7 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import '@fontsource/courier-prime'
 import '@fontsource-variable/oswald'
-import Navbar from '../components/Navbar.astro';
+import Navbar from '../components/Navbar.tsx';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -27,7 +27,7 @@ const { title, page } = Astro.props;
 	</head>
 	<body>
 		<div class="bg"></div>
-    <Navbar page={page}></Navbar>
+    <Navbar client:load page={page}></Navbar>
     <main>
 		<slot />
   </main>

@@ -17,8 +17,15 @@ const { href, title, description, src, bg } = Astro.props;
 	<div class:list={["md:h-72 rounded-b-lg p-5 flex flex-col justify-between h-fit bg-alternative"]}>
 	<h2 class="text-2xl md:text-4xl font-medium title-font text-center text-white text-shadow">{title}</h2>
 	<p class="text-center text-white text-lg p-4 font-text">{description}</p>
-	<a class="text-white inline-flex items-center mt-3" href={href}>MÁS INFORMACIÓN
-	  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+	<a class="inline-flex items-center mt-3" href={href}>
+	  <span class="font-text text-transparent bg-clip-text animate-text-shine "
+	  style={{
+		backgroundImage: "linear-gradient(110deg, white 0%, black 45%,gray 50%, white 100%)",
+		backgroundSize: "200% 100%",
+		backgroundPosition: "0% 50%"
+	  }}  >MÁS INFORMACIÓN
+	</span>
+	  <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
 		<path d="M5 12h14M12 5l7 7-7 7"></path>
 	  </svg>
 	</a>

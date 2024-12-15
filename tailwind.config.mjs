@@ -13,7 +13,9 @@ export default {
 			  },
 		},
 		animation: {
-			"background-shine": "background-shine 2s linear infinite"
+			"background-shine": "background-shine 3s linear infinite",
+			"text-shine": "text-shine 3s linear infinite",
+			
 			  },
 			  keyframes: {
 			"background-shine": {
@@ -23,7 +25,15 @@ export default {
 			  "to": {
 				"backgroundPosition": "-200% 0"
 			  }
-			}
+			},
+			"text-shine": {
+          "0%": {
+            backgroundPosition: "0% 0%",
+          },
+          "100%": {
+            backgroundPosition: "-200% 0%",
+          },
+        },
 		  }
 	},
 	plugins: [],

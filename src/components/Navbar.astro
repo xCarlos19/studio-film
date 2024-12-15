@@ -12,13 +12,26 @@ const { page } = Astro.props;
     class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
   >
     <div
-      class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      class="flex gap-6 title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
     >
     <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/logo-icono-final.PNG">
-      <span class="ml-3 text-xl">STUDIO FILMS 23</span>
+      <span class="text-xl">STUDIO FILMS 23</span>
+
+      <button
+      class="inline-flex items-center text-gray-900 md:hidden focus:outline-none"
+      id="menu-toggle" 
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
     </div>
+
+   
+    
     <nav
-      class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center sm:gap-10 gap-2"
+      id="nav-menu"
+      class="hidden flex flex-col md:flex sm:flex-row md:ml-auto md:mr-auto flex-wrap items-center text-base justify-center sm:gap-10 gap-2"
     >
       <a
         class="inline-flex items-center cursor-pointer border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
@@ -38,9 +51,21 @@ const { page } = Astro.props;
         href="/servicios/book">SERVICIOS</a
       >
       <a
-        class="inline-flex items-center cursor-pointer  border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0"
-        href="/#contacto">CONTACTO</a
+        class:list={["inline-flex items-center cursor-pointer  border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0",
+        page === 'contacto' && 'text-gray-900 bg-gray-200']}
+        href="/contacto">CONTACTO</a
       >
     </nav>
   </div>
 </header>
+
+<script>
+  const button = document.getElementById('menu-toggle');
+
+  button.addEventListener('click', () => {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('hidden');
+  });
+  
+    
+</script>
