@@ -1,0 +1,19 @@
+# Archivo robots.txt para https://www.studiofilms23.es/
+
+# Permitir acceso a todos los rastreadores
+User-agent: *
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /*?utm_source=
+Disallow: /*?sessionid=
+Disallow: /api/sendEmail.json
+
+# Permitir el acceso a todas las páginas principales
+Allow: /
+
+# Bloquear contenido no deseado (si existe)
+# Ejemplo: Disallow: /admin/
+
+# Sitemap para ayudar a los rastreadores a encontrar las páginas clave
+Sitemap: https://www.studiofilms23.es/sitemap.xml

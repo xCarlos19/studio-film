@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '@fontsource/courier-prime'
 import '@fontsource-variable/oswald'
 import '@fontsource-variable/dancing-script';
@@ -14,11 +14,11 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Estudio cinematográfico en Valencia" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/PNG" href="/logo-icono-final.PNG" />
+		<link rel="icon" type="image/PNG" href="/logo-final.webp" />
 		<meta name="generator" content={Astro.generator} />
-    <ViewTransitions />
+    <ClientRouter />
 		<title>{title}</title>
 	</head>
 	<body>

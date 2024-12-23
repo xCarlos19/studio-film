@@ -12,14 +12,14 @@ const { href, title, description, src, desc } = Astro.props;
 ---
 
 <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-	<div class="rounded-t-lg h-64 overflow-hidden">
+	<div class="rounded-t-lg h-56 md:h-64 overflow-hidden">
 	  <img alt={desc} class="object-cover object-center" src={src}>
 	</div>
 	<div class:list={["md:h-72 rounded-b-lg p-5 flex flex-col justify-between h-fit bg-alternative"]}>
 	<h2 class="text-2xl md:text-4xl font-medium title-font text-center text-white text-shadow">{title}</h2>
 	<p class="text-center text-white text-lg p-4 font-text">{description}</p>
-	<a class="inline-flex items-center mt-3" href={href}>
-	  <span class="font-text text-transparent bg-clip-text animate-text-shine "
+	<a class="inline-flex items-center mt-3"  href={href}>
+	  <span class="font-text text-transparent bg-clip-text animate-text-shine " aria-label={`Más información sobre ${title}`}
 	  style={{
 		backgroundImage: "linear-gradient(110deg, white 0%, black 45%,gray 50%, white 100%)",
 		backgroundSize: "200% 100%",
