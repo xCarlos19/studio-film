@@ -6,21 +6,24 @@ const servicios = [
         title: "BOOK ACTORAL",
         description: "Tu carta de presentación ante los directores de casting, agencias, productores.",
         bg: "bg-blue-100",
-        src:"/photo17.jpeg",
+        src:"/actriz-oscuro-small.webp",
+        desc: "Actriz en sesión de fotos",
         href: "/servicios/book"
     },
     {
         title: "VIDEOBOOK",
         description: "Un videobook es la herramienta clave para mostrar tu capacidad actoral, transmitiendo emociones y transformándote en distintos personajes frente a la cámara.",
         bg: "bg-blue-100",
-        src:"/photo7.jpeg",
+        src:"/actores-escena-small.webp",
+        desc: "Actores en escena",
         href: "/servicios/videobook"
     },
     {
         title: "COACH ACTORAL",
         description: "Ofrecemos un acompañamiento personalizado para perfeccionar tus habilidades interpretativas y mejores el manejo de las emociones y técnicas frente a la cámara.",
         bg: "bg-blue-100",
-        src:"/photo8.jpeg",
+        src:"/actores-coach-small.webp",
+        desc: "Actores con directora",
         href: "/servicios/coach"
     }
 ];
@@ -45,6 +48,7 @@ const servicios = [
                 description={service.description}
                 bg={service.bg}
                 href={service.href}
+                desc={service.desc}
                 src={service.src}
             />
         ))}

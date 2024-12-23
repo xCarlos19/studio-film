@@ -27,8 +27,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         {images.map((image, index) => (
           <img
             key={index}
-            src={image.src}
-            alt={`Image from ${image.alt} album`}
+            src={`${image.src}-small.webp`}
+            alt={image.alt}
             width={300}
             height={300}
             className="rounded mb-4 border border-transparent hover:scale-105 hover:cursor-pointer transition-all duration-75 ease-in-out"
@@ -49,9 +49,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
               &times;
             </button>
             <img
-              src={selectedImage?.src}
-              alt={`Large view of ${selectedImage?.alt}`}
-              className="max-w-sm max-h-[90%] md:max-w-xl rounded"
+              src={`${selectedImage?.src}-big.webp`}
+              alt={selectedImage?.alt}
+              className="max-w-sm max-h-[90%] md:max-w-4xl rounded"
             />
           </div>
         </div>

@@ -1,23 +1,22 @@
 ---
-import { Image } from "astro:assets";
 import ImageGallery from "./ImageGallery.tsx";
 
 const images = [
-    { src: '/photo4.jpeg', alt: 'Gallery 3' },
-    { src: '/photo30.jpeg', alt: 'Gallery 3' },
-    {src: '/photo20.jpeg', alt: 'Gallery 3' },
-    {src: '/photo-hori.jpeg', alt: 'Gallery 3' },
-    {src: '/photo8.jpeg', alt: 'Gallery 3' },
-    {src: '/photo-hori-3.jpeg', alt: 'Gallery 1' },
-    {src: '/photo-hori-2.jpeg', alt: 'Gallery 3' },
-    { src: '/photo23.jpeg', alt: 'Gallery 9' },
-    { src: '/photo22.jpeg', alt: 'Gallery 3' },
-    { src: '/photo27.jpeg', alt: 'Gallery 1' },
-    { src: '/photo29.jpeg', alt: 'Gallery 1' },
-    { src: '/photo9.jpeg', alt: 'Gallery 3' },
-    { src: '/photo28.jpeg', alt: 'Gallery 3' },
-    { src: '/photo25.jpeg', alt: 'Gallery 1' },
-    { src: '/photo26.jpeg', alt: 'Gallery 1' },
+    { src: '/directora-camara', alt: 'Imágen de directora con cámara' },
+    { src: '/equipo-rodaje', alt: 'Imágen del equipo de rodaje' },
+    {src: '/actriz-maquillaje', alt: 'Imágen de actriz siendo maquillada' },
+    {src: '/directora-pal', alt: 'Imágen de directora con paleta de colores' },
+    {src: '/actores-coach', alt: 'Imágen actores con directora' },
+    {src: '/equipo-posando', alt: 'Imágen del equipo posando para una foto' },
+    {src: '/equipo-escena', alt: 'Imágen del equipo durante el rodaje' },
+    { src: '/actriz-fondo-negro', alt: 'Imágen de actriz con fondo negro' },
+    { src: '/actriz-costado', alt: 'Imágen de actriz posando de lado' },
+    { src: '/actriz-frente', alt: 'Imágen de actriz posando de frente' },
+    { src: '/actor-sonriendo', alt: 'Imágen de actor posando de frente sonriendo' },
+    { src: '/actor-pistola', alt: 'Imágen de actor siendo apuntado por una pistola' },
+    { src: '/actor-sombra', alt: 'Imágen de actor sonriendo' },
+    { src: '/actor-lado', alt: 'Imágen de actor sentado de lado' },
+    { src: '/actriz-frontal-negro', alt: 'Imágen de actriz con camisa negra' },
 
 
 
@@ -27,23 +26,3 @@ const images = [
 ---
 
 <ImageGallery client:load images={images} />
-
-<!-- <div
-    class="mx-auto container my-8 p-4 columns-2 md:columns-3 lg:columns-4 xl:columns-5"
-  >
-    {
-      images.map((image) => (
-        <Image
-          src={image.src}
-          alt={`Image from ${image.alt} album`}
-          format="jpeg"
-          quality="high"
-          width={300}
-          height={300}
-          class="rounded mb-4 border border-transparent hover:scale-105 hover:cursor-pointer transition-all duration-75 ease-in-out"
-          loading="lazy"
-        />
-      ))
-      
-    }
-  </div> -->

@@ -1,5 +1,4 @@
 ---
-import ButtonBackgroundShine from "./ButtonBackgroundShine";
 import { motion } from "motion/react"
 ---
 
@@ -92,9 +91,7 @@ import { motion } from "motion/react"
             const video = document.getElementById("hero-vid") as HTMLVideoElement;
 
             // Reinicia el video forzando su recarga
-            if (video) {
-                video.pause();
-                video.currentTime = 0; // Reinicia el tiempo
+            if (video) { // Reinicia el tiempo
                 video.load();         // Recarga el video
                 video.play();         // Vuelve a reproducirlo
             }

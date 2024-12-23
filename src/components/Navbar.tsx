@@ -15,7 +15,7 @@ const Navbar = ({page=""}) => {
     <div
       className="flex gap-6 title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
     >
-    <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/logo-icono-final.PNG" />
+    <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/logo-final.webp" />
       <span className="text-xl">STUDIO FILMS 23</span>
 
       <button

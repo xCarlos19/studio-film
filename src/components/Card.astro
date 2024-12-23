@@ -4,15 +4,16 @@ interface Props {
 	description: string;
 	href: string;
 	src: string;
+	desc: string;
 	bg: string;
 }
 import '@fontsource-variable/oswald';
-const { href, title, description, src, bg } = Astro.props;
+const { href, title, description, src, desc } = Astro.props;
 ---
 
 <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
 	<div class="rounded-t-lg h-64 overflow-hidden">
-	  <img alt="content" class="object-cover object-center" src={src}>
+	  <img alt={desc} class="object-cover object-center" src={src}>
 	</div>
 	<div class:list={["md:h-72 rounded-b-lg p-5 flex flex-col justify-between h-fit bg-alternative"]}>
 	<h2 class="text-2xl md:text-4xl font-medium title-font text-center text-white text-shadow">{title}</h2>
