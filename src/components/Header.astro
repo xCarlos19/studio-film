@@ -39,7 +39,7 @@ import { motion } from "motion/react"
     </div>
     <div class="b-opacity"></div>
 
-    <video autoplay loop="loop" muted playsinline preload="none" id="hero-vid" class="hero-video">
+    <video autoplay aria-placeholder="./placeholder.jpg" loop="loop" muted playsinline preload="none" id="hero-vid" class="hero-video">
         <source src="./video1.webm" type="video/webm" />
     </video>
 </header>
@@ -91,9 +91,8 @@ import { motion } from "motion/react"
             const video = document.getElementById("hero-vid") as HTMLVideoElement;
 
             // Reinicia el video forzando su recarga
-            if (video) { // Reinicia el tiempo
-                video.load();         // Recarga el video
-                video.play();         // Vuelve a reproducirlo
+            if (video && video.readyState < 3) {
+                video.play();
             }
         });
     </script>
