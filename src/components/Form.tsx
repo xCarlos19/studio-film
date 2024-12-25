@@ -143,7 +143,7 @@ const Form = () => {
                 className=" py-2 px-6 text-xl rounded-lg font-text font-bold border-2 animate-background-shine justify-center border-[#500606] bg-[linear-gradient(110deg,#500606,45%,#8b5050,55%,#500606)] bg-[length:200%_100%] text-white transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
             >Enviar
             </button>
-            <p className="text-md font-text text-gray-500 mt-3">
+            <p className="text-md font-text text-gray-600 mt-3">
                 Si no estás interesado en ningún pack en concreto, puedes indicarlo en el mensaje y te asesoraremos en lo que más se ajuste a tu perfil.
             </p>
         </form>
