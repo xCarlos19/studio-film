@@ -8,14 +8,14 @@ import { motion } from "motion/react"
     >
         <div class="flex flex-col justify-center text-shadow">
             
-            <motion.h1 client:load initial={{ scale: 0 }} animate={{ transition: { duration: 1, ease: "linear" }, scale: 1 }}  className="text-xl l-spacing sm:text-6xl md:text-7xl lg:text-4xl mb-4 mx-4 font-semibold">
+            <motion.h1 client:load initial={{ opacity: 0 }} animate={{ transition: { duration: 1, ease: "linear" }, opacity: 1 }}  className="text-xl l-spacing sm:text-6xl md:text-7xl lg:text-4xl mb-4 mx-4 font-semibold">
                 STUDIO
             </motion.h1>
-            <motion.h1 client:load initial={{scale: 0 }} animate={{ transition: { duration: 1, delay: 0.5, ease: "linear" }, scale: 1 }} className="text-5xl l-spacing-sm sm:text-6xl md:text-7xl lg:text-9xl mb-4">
+            <motion.h1 client:load initial={{opacity: 0 }} animate={{ transition: { duration: 1, ease: "linear" }, opacity: 1 }} className="text-5xl l-spacing-sm sm:text-6xl md:text-7xl lg:text-9xl mb-4">
                 FILMS 23
             </motion.h1>
 
-            <motion.div client:load initial={{scale: 0 }} animate={{ transition: { duration: 0.7, delay:1,  ease: "linear" }, scale: 1 }} className="my-10 w-full font-text">
+            <motion.div client:load initial={{opacity: 0 }} animate={{ transition: { duration: 0.7, delay:1,  ease: "linear" }, opacity: 1 }} className="my-10 w-full font-text">
                 <p class="text-sm p-3 md:text-xl lg:text-2xl l-spacing-xs">
                     SI ESTÁS BUSCANDO IMPULSAR TU CARRERA Y TENER UNA IMAGEN MÁS
                     PROFESIONAL
@@ -25,7 +25,7 @@ import { motion } from "motion/react"
             
         </div>
 
-        <motion.div  client:load initial={{scale: 0 }} animate={{ transition: { duration: 0.7, delay:1.5,  ease: "linear" }, scale: 1 }} className="mt-16 w-[60%] items-center m-auto flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 lg:gap-24">
+        <motion.div  client:load initial={{opacity: 0 }} animate={{ transition: { duration: 0.7, delay:1.5,  ease: "linear" }, opacity: 1 }} className="mt-16 w-[60%] items-center m-auto flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 lg:gap-24">
            
                 <a class="px-8 sm:px-12 py-3 sm:py-4 border-2 rounded-lg font-bold border-white hover:bg-slate-200 hover:text-black" href="/servicios/book">SERVICIOS</a>
            
