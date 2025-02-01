@@ -25,13 +25,13 @@ const packs = [{
     name: "Videobook Monólogo",
     price: 200,
 }, {
-    name: "Coach Profesional",
+    name: "Dirección Profesional",
     price: 140,
 }, {
-    name: "Coach Intermedio",
+    name: "Dirección Intermedio",
     price: 100,
 }, {
-    name: "Coach Básico",
+    name: "Dirección Básico",
     price: 50,
 }]
 
